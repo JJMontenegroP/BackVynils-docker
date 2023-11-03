@@ -37,7 +37,7 @@ import { AlbumMusicianModule } from './albummusician/albummusician.module';
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.DB_HOST || 'localhost',
-      port: process.env.DB_PORT || 5432,
+      port: +process.env.DB_PORT || 5432,
       username: process.env.DB_USERNAME || 'postgres_render',
       password: process.env.DB_PASSWORD ||'postgres_render',
       database: process.env.DB_NAME ||'vinyls',
